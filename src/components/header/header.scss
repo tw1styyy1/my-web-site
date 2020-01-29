@@ -1,0 +1,321 @@
+.white-btn{
+  border: none;
+  background-color: #567842;
+  outline: none;
+  height: 40px;
+  padding: 0 20px;
+  border-radius: 10px;
+  color: white;
+  text-shadow: 0px 4px 8px rgba(54, 123, 245, 0.16), 0px 8px 16px rgba(54, 123, 245, 0.1);
+  transition: 0.1s linear;
+}
+
+.user-header{
+   cursor: pointer;
+   font-size: 16px;
+   color: white;
+   margin-top: 30px;
+   margin-left: auto;
+   margin-right: 15px;
+ }
+
+.user-header-withPhoto{
+  cursor: pointer;
+  font-size: 16px;
+  color: white;
+  margin-top: 30px;
+  margin-left: 10px;
+  margin-right: 15px;
+}
+
+.btn{
+  padding: 10px 50px;
+  font-size: 14px;
+  font-weight: 500;
+  background-color: #567482;
+  border: #FFFFFF 1px solid;
+  border-radius: 10px;
+  outline: none;
+}
+
+.header-title{
+  display: flex;
+  border-radius: 10px;
+
+  img{
+    background-color: #b3c8cf;
+    border-radius: 10px;
+    height: 45px;
+    padding: 10px;
+  }
+
+  h1{
+    color: white;
+  }
+}
+
+.header-title{
+  margin: 12px 10px;
+
+  h1{
+    white-space: nowrap;
+    padding-left: 10px;
+    font-size: 34px;
+  }
+}
+
+.white-btn:hover{
+  transform: scale(1.25);
+  border: none;
+  color: #fff;
+}
+
+.header {
+  margin: 0 auto;
+  max-width: 1140px;
+  display: flex;
+  border-bottom: 1px solid white;
+
+  button{
+    margin: 20px 0 15px auto;
+  }
+
+}
+
+@mixin sample {
+  transition: 0.3s linear;
+  background: #FFFFFF;
+  box-shadow: 0px 1px 2px rgba(8, 35, 48, 0.24), 0px 2px 6px rgba(8, 35, 48, 0.16);
+  border-radius: 10px;
+  color: black;
+}
+
+.menu {
+  margin-left: 25px;
+  max-width: 1140px;
+  text-align: left;
+
+  a {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    display: inline-block;
+    margin: 20px 10px 0 0;
+    padding: 10px 15px;
+    font-size: 14px;
+    color: white;
+  }
+
+  a:hover{
+    @include sample;
+  }
+
+}
+
+html .active{
+  @include sample;
+}
+
+.mobile-menu {
+  background-color: rgba(238, 238, 238, 0.8);
+  display: none;
+  max-width: 100vw;
+  height: 100vh;
+}
+
+.user-window{
+  background-color: #616161;
+  max-width: 300px;
+  height: 170px;
+}
+
+.user-photo{
+  object-fit: cover;
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  width: 65px;
+  height: 65px;
+  background-color: #E0E0E0;
+  border-radius: 100%;
+}
+
+.user-photo-header{
+  object-fit: cover;
+  width: 65px;
+  height: 65px;
+  margin-left: auto;
+  margin-right: 0;
+  margin-top: 10px;
+  background-color: #E0E0E0;
+  border: 1px solid #e0e0e0;
+  border-radius: 100%;
+}
+
+.user{
+  font-size: 14px;
+  padding: 10px 0;
+  color: #fff;
+  position: relative;
+  top: 130px;
+  left: 30px;
+
+  span{
+    position: relative;
+    left: 50px;
+  }
+}
+
+.user:hover{
+  color: #4285F4;
+}
+
+.header-mobile{
+  display: none;
+}
+
+.mobile-menu{
+  display: none;
+}
+
+.my-modal{
+  position: absolute;
+  top: 117px;
+  right: 220px;
+  color: white;
+  background-color: #bfbfbf;
+  height: 400px;
+  max-width: 300px;
+  display: inline-block;
+  padding: 20px;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+}
+
+.burger-menu{
+  display: none;
+}
+
+.mobile-menu_active{
+  display: none;
+}
+
+@media (max-width: 830px) {
+
+  .menu-btn{
+    position: relative;
+    left: 20px;
+    margin: 20px auto;
+  }
+
+  .burger-menu{
+    height: 30px;
+    width: 30px;
+    background-color: #FFFFFF;
+    display: block;
+    position: fixed;
+    top: 5px;
+    left: 5px;
+    border: none;
+    outline: none;
+    opacity: 1;
+    transition: 0.5s linear;
+
+    svg{
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  .burger-menu_disabled{
+    opacity: 0;
+    left: -50px;
+    position: fixed;
+  }
+
+  .burger-menu:hover{
+    background-color: #4285F4;
+  }
+
+  .header-mobile{
+    display: block;
+  }
+
+  .header-top{
+    display: none;
+  }
+
+  .header{
+    display: none;
+  }
+
+  .bgc-grey{
+    background-color: #FAFAFA;
+    max-width: 300px;
+  }
+
+  .menu{
+    margin-left: 0;
+  }
+
+  .mobile-menu_active{
+    transition: 0.5s linear;
+    position: absolute;
+    display: block;
+    top: 0;
+    left: -500px;
+    width: 300px;
+
+    a{
+      margin: 10px;
+      position: relative;
+      font-weight: 500;
+      display: block;
+      font-size: 14px;
+
+      span{
+        margin-right: 15px;
+        position: relative;
+        top: 5px;
+        left: 0;
+      }
+
+    }
+
+    .active{
+      color: #4285F4;
+    }
+  }
+
+  .mobile-menu{
+    position: absolute;
+    display: block;
+    transition: 0.5s linear;
+    top: 0;
+    left: 0;
+    width: 300px;
+
+    a{
+      margin: 10px;
+      position: relative;
+      font-weight: 500;
+      display: block;
+      font-size: 14px;
+
+      span{
+        margin-right: 15px;
+        position: relative;
+        top: 5px;
+        left: 0;
+      }
+
+    }
+
+    .active{
+      color: #4285F4;
+    }
+
+  }
+
+
+}
